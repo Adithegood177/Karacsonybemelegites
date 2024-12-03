@@ -4,6 +4,7 @@
 	{
 		static void Main(string[] args)
 		{
+			/*
             Console.WriteLine("Csá from mikula segito");
             Console.WriteLine("help mikula mennyi kiddo sigma");
 
@@ -26,6 +27,11 @@
 					siker = true;
 
 				}
+				catch (OverflowException)
+				{
+                    //2,147,483,647 a maximális szám
+                    Console.WriteLine("Túl léptük a keretet");
+                }
 				catch(FormatException)
 				{
                     Console.WriteLine("Hiba: Csak számokat adhatsz meg! ");
@@ -37,6 +43,9 @@
                 Console.WriteLine("Köszi");
 
             }
+			*/
+
+
         }
 	}
 }

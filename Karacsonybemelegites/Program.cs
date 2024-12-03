@@ -46,6 +46,23 @@
 			*/
 
 
+			Console.WriteLine("Adj nevet: ");
+			string nev = Console.ReadLine();
+
+            Console.WriteLine($"Hány ajándékot kapjon {nev}?");
+			try { 
+				int ajandekSzam = Convert.ToInt32(Console.ReadLine());
+				if (ajandekSzam < 0)
+					throw new Exception("Az ajándékok száma nem lehet negativ");
+				Console.WriteLine($"{nev} {ajandekSzam} ajandekot fog kapni");
+			} 
+			catch (FormatException)
+			{
+                Console.WriteLine("Csak számot lehet megadni");
+            }
+			catch (Exception ex) 
+			{ Console.WriteLine($"Hiba: {ex.Message}"); }
+
         }
 	}
 }
